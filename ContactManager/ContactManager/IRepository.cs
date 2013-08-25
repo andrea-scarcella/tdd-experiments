@@ -5,10 +5,8 @@ using System.Text;
 
 namespace ContactManager
 {
-    public class Contact
+    public interface IRepository<T>
     {
-        public string EMail { get; set; }
-
-        public string mobile { get; set; }
+        void Add(Contact c);
     }
 }

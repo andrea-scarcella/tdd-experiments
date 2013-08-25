@@ -35,6 +35,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,11 +45,16 @@
   <ItemGroup>
     <Compile Include="ContactFactoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlContactRepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ContactManager.Dal\ContactManager.Dal.csproj">
+      <Project>{ce862461-4893-4db5-ba6f-a315095ad4ab}</Project>
+      <Name>ContactManager.Dal</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ContactManager\ContactManager.Model.csproj">
       <Project>{63c471d2-0fed-4091-ae5e-09266d8458fe}</Project>
       <Name>ContactManager.Model</Name>
