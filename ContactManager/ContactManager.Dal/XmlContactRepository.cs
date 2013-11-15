@@ -11,8 +11,12 @@ namespace ContactManager.Dal
     public class XmlContactRepository : IRepository<Contact>
     {
         List<ContactDTO> _cache = new List<ContactDTO>();   
+        private static void setPkey(Contact c){
+            c.Id=Guid.NewGuid();
+        }
         public void Add(Contact c)
         {
+            setPkey(c);
             ContactDTO cd = new ContactDTO(c);
             _cache.Add(cd);
             using (FileStream writer = new FileStream(_filename, FileMode.Append, FileAccess.Write))

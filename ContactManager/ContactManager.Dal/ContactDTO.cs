@@ -15,9 +15,12 @@ namespace ContactManager.Dal
         }
         public ContactDTO(Contact c)
         {
+            Id = c.Id;
             EMail = c.EMail;
             mobile = c.mobile;
         }
+        [DataMember]
+        public Guid Id { get; set; }
         [DataMember]
         public string EMail { get; set; }
         [DataMember]
